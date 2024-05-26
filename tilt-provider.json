@@ -1,0 +1,17 @@
+[
+    {
+        "name": "docker-kuborbit",
+        "config": {
+            "image": "ghcr.io/kubeorbit/cluster-api-provider-docker:dev",
+            "live_reload_deps": [
+                "cmd",
+                "go.mod",
+                "go.sum",
+                "api",
+                "internal",
+                "pkg"
+            ],
+            "label": "CAPDKO"
+        }
+    }
+]
