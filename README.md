@@ -38,3 +38,27 @@ test -s /Users/vishal/workspace/kubeorbit/cluster-api-provider-docker/bin/contro
 Next: implement your new API and generate the manifests (e.g. CRDs,CRs) with:
 $ make manifests
 ```
+
+## Create DockerMachine API
+
+```bash
+❯ operator-sdk create api --group infrastructure --version v1alpha1 --kind DockerMachine
+INFO[0000] Create Resource [y/n]
+y
+INFO[0001] Create Controller [y/n]
+y
+INFO[0002] Writing kustomize manifests for you to edit...
+INFO[0002] Writing scaffold for you to edit...
+INFO[0002] api/v1alpha1/dockermachine_types.go
+INFO[0002] api/v1alpha1/groupversion_info.go
+INFO[0002] internal/controller/suite_test.go
+INFO[0002] internal/controller/dockermachine_controller.go
+INFO[0002] internal/controller/dockermachine_controller_test.go
+INFO[0002] Update dependencies:
+$ go mod tidy
+INFO[0002] Running make:
+$ make generate
+/Users/vishal/workspace/kubeorbit/cluster-api-provider-docker/bin/controller-gen object:headerFile="hack/boilerplate.go.txt" paths="./..."
+Next: implement your new API and generate the manifests (e.g. CRDs,CRs) with:
+$ make manifests
+```
